@@ -11,3 +11,10 @@ __pycache__/
 
 # Herramientas de IA para Coding/Testing (Qodo)
 .qodo/
+
+#variables de entorno
+.env
+.env.local
+.env.development
+.env.test
+.env.production

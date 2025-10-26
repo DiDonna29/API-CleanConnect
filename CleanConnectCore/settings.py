@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-&%i=oj0oie!d61$4k@b!6u90$mon5#cx39ddr266*1354e4%j*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-
+    
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,10 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+ 
+    # 3rd Party (DRF)
     'rest_framework',
 
-    #MyApps
+    # Mis Apps (Módulos de CleanConnect)
     'users',
+    'jobs',
+    'payments',
+    'reviews', 
+    'media',
+    'audit',
+    'notifications',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +132,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Añadir configuración para usar nuestro modelo de usuario
+AUTH_USER_MODEL = 'users.CustomUser'
+
+# # Añadir la configuración para UUID
+# DEFAULT_AUTO_FIELD = 'django.db.models.UUIDField'
