@@ -1,0 +1,13 @@
+# Entorno Virtual
+venv/
+
+# Base de datos local de Django (si usas SQLite)
+db.sqlite3
+
+# Archivos de Python/Django
+__pycache__/
+*.pyc
+.DS_Store
+
+# Herramientas de IA para Coding/Testing (Qodo)
+.qodo/
